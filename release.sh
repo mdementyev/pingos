@@ -194,10 +194,10 @@ fi
 
 if [ ! -d "./nginx" ]
 then
-    wget https://nginx.org/download/nginx-1.17.5.tar.gz
-    tar zxvf nginx-1.17.5.tar.gz
-    mv nginx-1.17.5 nginx
-    rm -f nginx-1.17.5.tar.gz
+    wget https://nginx.org/download/nginx-1.18.0.tar.gz
+    tar zxvf nginx-1.18.0.tar.gz
+    mv nginx-1.18.0 nginx
+    rm -f nginx-1.18.0.tar.gz
     cp resource/conf-template/nginx.conf nginx/conf/nginx.conf
 fi
 
@@ -245,22 +245,6 @@ then
             fi
         fi
 
-        if [ ! -f $WWW_ROOT"/stat.xsl" ]
-        then
-            cp ./resource/stat.xsl $WWW_ROOT"/stat.xsl"
-        fi
-
-        if [ ! -f $WWW_ROOT"/crossdomain.xml" ]
-        then
-            cp ./resource/crossdomain.xml $WWW_ROOT"/crossdomain.xml"
-        fi
-
-        if [ ! -d $WWW_ROOT"/h5player" ]
-        then
-            cd $WWW_ROOT
-            git clone https://github.com/im-pingo/h5player.git
-            cd $OPWD
-        fi
     fi
 
 fi

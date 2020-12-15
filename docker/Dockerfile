@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 RUN \
     apt update && \
     apt install -y --fix-missing git gcc libssl-dev && \
-    git clone --depth=1 https://github.com/im-pingo/pingos.git && \
+    git clone --depth=1 https://github.com/mdementyev/pingos.git && \
     (cd pingos && \
     chmod +x ./release.sh && \
     ./release.sh -i) && \
